@@ -1,71 +1,60 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Key", HidePremium = false, SaveConfig = false})
+function p(txt)
+-- function "p" which will write "[CONSOLE] >> " to each message written by the console
 
-OrionLib:MakeNotification({
-    Name = "Logged in!",
-    Content = "You are logged in as "..Player.Name..".",
-    Image = "rbxassetid://12738913447",
-    Time = 5
-})
-
-_G.Key = game:HttpGet("discord")
-_G.KeyInput = "string"
-
-function CorrectKeyNotification()
-  OrionLib:MakeNotification({
-    Name = "Correct Key!",
-    Content = "You have entered the correct key",
-    Image = "rbxassetid://12738913447",
-    Time = 5
-})
+    rconsoleprint("\n[CONSOLE] >> "..txt)
 end
 
-function IncorrectKeyNotification()
-  OrionLib:MakeNotification({
-    Name = "Incorrect Key!",
-    Content = "You have entered the incorrect key",
-    Image = "rbxassetid://12738913447",
-    Time = 5
-})
+function incorrect_commande()
+p("incorrect command try again")
+imputted_commande()
 end
 
-function MakeScriptHub()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Powerblack09yt/Anime-fighters-script/main/Anime%20fighters"))()
+function imputted_commande()
+
+    local inputted_commande_function = rconsoleinput()
+    
+    if inputted_commande_function == "OuiSom89"then
+        p("correct key. Thanks for using this script.\n[CONSOLE] >> The key is correct, if you used krnl I invite you to do the \"Close\" command Otherwise I invite you to minimize the console. --> ")
+        writefile("key_sys", "OuiSom89")
+        imputted_commande()
+    elseif inputted_commande_function == "Close" then
+        rconsoleclear()
+-- clear console
+
+        rconsoleclose()
+-- close the console only with krnl synapse does not have this functionality for the other exploits I don't care
+
+    elseif inputted_commande_function == "Restart" then
+        Start()
+-- reboot script
+
+    elseif inputted_commande_function == "Discord" then
+        setclipboard("discord.gg/W7VHxeP4ks")
+        p("The discord link is copied to your clipboard. --> ")
+        imputted_commande()
+    elseif inputted_commande_function == "Key_Link" then
+        setclipboard("https://link-target.net/443009/key-on-dark-script-lua")
+        p("The key link is copied to your clipboard. --> ")
+        imputted_commande()
+    else p("incorrect command try again. --> ")
+        imputted_commande() 
+    end
 end
+function Start()
+-- The script is made using functions to be able to start again at any 
 
-function DestroyUI()
-  OrionLib:Destroy()
+    p("Hello, before proceeding to the verification of the key I give you the commands of the bot which could be useful to you.\n[CONSOLE] >> Command : Close(only with krnl), Restart, Discord, Key_Link.\n[CONSOLE] >> I will check if you have used this script before.\n[CONSOLE] >> Wait 1second.")
+    wait(1)
+    if isfile("key_system") == true then
+--function that returns true if the "key_systel" file is present
+
+        p("The key is correct, if you used krnl I invite you to do the command \"Close\" and other if necessary, otherwise I invite you to minimize the console. --> ")
+        imputted_commande()
+--redirect to function above
+
+    else p("I don't see any trace of you using this script I invite you to use the Key_Link command to have the link of the key which will be copied into your clipboard. --> ")
+        imputted_commande()
+    end
 end
-
-local Tab = Window:MakeTab({
-    Name = "Key",
-    Icon = "rbxassetid://14015790377",
-    PremiumOnly = false
-})
-
-Tab:AddTextbox({
-    Name = "Enter Key",
-    Default = "Enter Key",
-    TextDisappear = false,
-    Callback = function(Value)
-      _G.KeyInput = Value
-    end      
-})
-
-Tab:AddButton({
-    Name = "Check Key!",
-    Callback = function()
-          if _G.KeyInput == _G.Key then
-          DestroyUI()
-          MakeScriptHub()
-          CorrectKeyNotification()
-          else
-              IncorrectKeyNotification()
-          end
-      end    
-})
-
-Tab:AddParagraph("Paragraph","You are logged in as "..Player.Name..".")
-
-OrionLib:Init()
+Start()
+--Made by OuiSom89
