@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "Lynch Syndicate", HidePremium = false, SaveConfig = false})
+local Window = OrionLib:MakeWindow({Name = "Key", HidePremium = false, SaveConfig = false})
 
 OrionLib:MakeNotification({
     Name = "Logged in!",
@@ -9,7 +9,7 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-_G.Key = game:HttpGet("raw site link")
+_G.Key = game:HttpGet("discord")
 _G.KeyInput = "string"
 
 function CorrectKeyNotification()
