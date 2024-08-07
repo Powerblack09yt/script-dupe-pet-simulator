@@ -407,13 +407,13 @@ end)
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(Value)
-  getgenv().FarmFuncs = { LevelFarm = Value }
+  
 end)
 
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto farm nearest", Default = false })
     Toggle:OnChanged(function(Value)
-      getgenv().FarmFuncs = {NearestFarm = Value}
+    
     end)
 
 
