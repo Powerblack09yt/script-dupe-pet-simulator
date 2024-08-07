@@ -394,15 +394,7 @@ Tabs.discord:AddButton({
 
 local _MainFarm = Tabs.MainFarm do
 
-local Dropdown = Tabs.MainFarm:AddDropdown("Dropdown", {
-    Title = "farm tool",
-    Values = Loaded.WeaponsList,
-    Multi = false,
-    Default = Fight,
-})
-Dropdown:SetValue("Fight")
-Dropdown:OnChanged(function(Value)
-end)
+
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(Value)
@@ -421,18 +413,7 @@ local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto farm nearest",
         Content = "select enemies"
     })
   
-  local Dropdown = Tabs.MainFarm:AddDropdown("Dropdown", {
-    Title = "Select Enemie",
-    Values = Loaded.EnemeiesList,
-    Multi = false,
-    Default = Loaded.EnemeiesList[1],
-})
-
-Dropdown:SetValue("")
-
-Dropdown:OnChanged(function(Value)
-end)
-
+  
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Selected", Default = false })
 Toggle:OnChanged(function()
