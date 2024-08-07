@@ -402,7 +402,6 @@ local Dropdown = Tabs.MainFarm:AddDropdown("Dropdown", {
 })
 Dropdown:SetValue("Fight")
 Dropdown:OnChanged(function(Value)
-  Settings.ToolFarm = Value
 end)
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
