@@ -390,69 +390,6 @@ Tabs.discord:AddButton({
     Callback = function()
         setclipboard("https://discord.gg/wa4Z2XPVkq")
     end
-})
-
-local _MainFarm = Tabs.MainFarm do
-
-
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
-Toggle:OnChanged(function(Value)
-  
-end)
-
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto farm nearest", Default = false })
-    Toggle:OnChanged(function(Value)
-    
-    end)
-
-
-  Tabs.MainFarm:AddParagraph({
-        Title = "enemies",
-        Content = "select enemies"
-    })
-  
-  
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Selected", Default = false })
-Toggle:OnChanged(function()
-end)
-
-
-
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Take Quest [ Enemie Selected ]", Default = true })
-
-Toggle:OnChanged(function()
-
-end)
-
-Tabs.MainFarm:AddParagraph({
-  Title = "Boss Farm",
-  Content = ""
-})
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Meme Beast", Default = false })
-
-Toggle:OnChanged(function()
-
-end)
-
-
-Tabs.MainFarm:AddParagraph({
-  Title = "Raid",
-  Content = ""
-})
-
-local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Raid", Default = false })
-
-Toggle:OnChanged(function()
-end)
-
-
-
-
 
 
 
