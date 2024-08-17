@@ -308,24 +308,7 @@ end
 
 
 
-local function autofarm()
-     task.spawn(function()
-        while getgenv().autofarm do task.wait()
-                local Quest, QuestChecker = Funcs:GetCurrentQuest(), Funcs:CheckQuest()
-                if Quest then
-                  if QuestChecker then
-                    local _QuestName = QuestChecker.QuestGiver.Value
-                    if _QuestName == Quest.NpcName then
-                      if KillMonster(Quest.Enemy) then else GoTo(Quest.EnemyPos) end
-                    else
-                      if KillMonster(QuestChecker.Target.Value) then else GoTo(QuestLocation[_QuestName].CFrame) end
-                    end
-                  else TakeQuest(Quest.NpcName) end
-                end
-                return true
-            end
-    end)
-end
+
 
 
 
@@ -386,7 +369,24 @@ Toggle:OnChanged(function(Value)
       autofarm()
       
 end)
-  
+  local function autofarm()
+       task.spawn(function()
+          while getgenv().autofarm do task.wait()
+                  local Quest, QuestChecker = Funcs:GetCurrentQuest(), Funcs:CheckQuest()
+                  if Quest then
+                    if QuestChecker then
+                      local _QuestName = QuestChecker.QuestGiver.Value
+                      if _QuestName == Quest.NpcName then
+                        if KillMonster(Quest.Enemy) then else GoTo(Quest.EnemyPos) end
+                      else
+                        if KillMonster(QuestChecker.Target.Value) then else GoTo(QuestLocation[_QuestName].CFrame) end
+                      end
+                    else TakeQuest(Quest.NpcName) end
+                  end
+                  return true
+              end
+      end)
+  end
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto farm nearest", Default = false })
     Toggle:OnChanged(function(Value)
