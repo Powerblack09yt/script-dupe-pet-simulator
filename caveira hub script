@@ -329,7 +329,7 @@ end
 
 
 local function autofarm()
-  while getgenv().autofarm do task.wait()
+  while getgenv.autofarm do task.wait()
  local Quest, QuestChecker = Funcs:GetCurrentQuest(), Funcs:CheckQuest()
       if Quest then
         if QuestChecker then
@@ -398,7 +398,7 @@ end)
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(Value)
-getgenv().autofarm = Value
+getgenv.autofarm = Value
 autofarm()
 end)
   
