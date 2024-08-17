@@ -398,7 +398,7 @@ end)
 
 local Toggle = Tabs.MainFarm:AddToggle("MyToggle", {Title = "Auto Farm Level", Default = false })
 Toggle:OnChanged(function(Value)
-getgenv.autofarm = Value
+getgenv().autofarm = Value
 autofarm()
 end)
   
