@@ -407,7 +407,7 @@ if _G.Switch_Hub_Series_R then
 		end
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
+		Switch_Hub.Name = "Caveira Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
@@ -424,7 +424,7 @@ if _G.Switch_Hub_Series_R then
 		F_Level.Transparency = 1
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Level
 		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Text = "Switch Hub"
+		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Text = "Caveita Hub"
 		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
 		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextXAlignment = 'Center'
 		game:GetService("CoreGui")["Switch Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
@@ -708,7 +708,7 @@ if _G.Switch_Hub_Series_R then
 		end
 		-- Switch Hub C
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub C"
+		Switch_Hub.Name = "caveira Hub C"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		-- Fruit Inventory Backpack
 		local F_FruitB = Instance.new("Frame")
@@ -811,7 +811,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	
 	local PepsisWorld = library:CreateWindow({
-		Name = "Switch Hub [ Kaitun ]",
+		Name = "caveira Hub [ Kaitun ]",
 		Themeable = {	
 		}
 	})
