@@ -403,12 +403,12 @@ task.spawn(function() loadstring(game:HttpGet('https://raw.githubusercontent.com
 			return bit_zes
 		end
 
-		if game:GetService("CoreGui"):FindFirstChild('Switch Hub') then
-			game:GetService("CoreGui"):FindFirstChild('Switch Hub'):Destroy()
+		if game:GetService("CoreGui"):FindFirstChild('caveira Hub') then
+			game:GetService("CoreGui"):FindFirstChild('caveira Hub'):Destroy()
 		end
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
+		Switch_Hub.Name = "Caveira Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
