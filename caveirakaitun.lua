@@ -3477,7 +3477,6 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	CheckMonSpawn = {}
-	function Click()
 		
 	function GetItem(vu)
 		for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
