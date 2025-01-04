@@ -3478,16 +3478,7 @@ if _G.Switch_Hub_Series_R then
 		end
 	CheckMonSpawn = {}
 	function Click()
-		local Module = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework)
-		local CombatFramework = debug.getupvalues(Module)[2]
-		local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
-		CamShake:Stop()
-		CombatFramework.activeController.attacking = false
-		CombatFramework.activeController.timeToNextAttack = 0
-		CombatFramework.activeController.hitboxMagnitude = 60
-		game:GetService'VirtualUser':CaptureController()
-		game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-	end
+		
 	function GetItem(vu)
 		for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
 			if v["Name"] == vu then
