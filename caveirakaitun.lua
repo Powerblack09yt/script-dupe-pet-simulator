@@ -3823,11 +3823,6 @@ if _G.Switch_Hub_Series_R then
 	end
 
 	-- Attack
-	local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
-	Camera:Stop()
-	local plr = game.Players.LocalPlayer
-	local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
-	local CbFw2 = CbFw[2]
 	
 	function GetCurrentBlade() 
 	local p13 = CbFw2.activeController
