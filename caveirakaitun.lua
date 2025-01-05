@@ -1,4 +1,4 @@
-u
+
  
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
@@ -3823,6 +3823,21 @@ if _G.Switch_Hub_Series_R then
 	end
 
 	-- Attack
+function AutoClick()
+    --game:GetService('VirtualUser'):CaptureController()
+    --game:GetService('VirtualUser'):Button1Down(Vector2.new(1280, 672))
+end
+
+function AutoClick2()
+    game:GetService('VirtualUser'):CaptureController()
+    game:GetService('VirtualUser'):Button1Down(Vector2.new(1280, 672))
+end
+task.spawn(function()
+    while wait() do
+        local CameraShakerR = require(game.ReplicatedStorage.Util.CameraShaker)
+        CameraShakerR:Stop()
+    end
+end)
 	
 											
 	spawn(function()
