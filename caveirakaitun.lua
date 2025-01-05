@@ -1,15 +1,5 @@
 
-local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
-KeySystemUI.New({
-    ApplicationName = "CaveiraHub", -- Your Key System Application Name
-    Name = "CaveiraHub", -- Your Script name
-    Info = "Get Key For CaveiraHub", -- Info text in the GUI, keep empty for default text.
-    DiscordInvite = "https://discord.com/invite/wa4Z2XPVkq", -- Optional.
-    AuthType = "clientid" -- Can select verifycation with ClientId or IP ("clientid" or "ip")
-})
-repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
-if KeySystemUI.Finished() and KeySystemUI.Closed == false then
-    print("Key verified, can load script")
+ 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 getgenv().Faster = { 
@@ -11424,6 +11414,4 @@ if _G.Switch_Hub_Series_R then
 end
 
 
-  else
-    print("Player closed the GUI.")
-    end
+  
